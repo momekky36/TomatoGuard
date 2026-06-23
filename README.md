@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍅 TomatoGuard — AI-Powered Tomato Leaf Disease Detection
 
 ![Sanity Check](https://github.com/YOUR-USERNAME/tomatoguard/actions/workflows/sanity-check.yml/badge.svg)
@@ -230,3 +231,7 @@ git push -u origin main
 
 Then in `README.md`, replace `YOUR-USERNAME` in the CI badge URL near the
 top with your actual GitHub username so the badge renders.
+=======
+# TomatoGuard
+🍅 Computer vision pipeline that diagnoses tomato leaf diseases from a photo (PyTorch, Grad-CAM, Gradio demo). From-scratch CNN hits 92% test accuracy on real data; EfficientNet-B0 transfer-learning track included.
+>>>>>>> c7a1a6e5e24c33a5b747b73a1d7240d754da04c9
