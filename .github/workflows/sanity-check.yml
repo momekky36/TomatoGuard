@@ -1,0 +1,35 @@
+name: Sanity Check
+
+# Runs on every push/PR: installs dependencies and confirms every module
+# at least imports and parses cleanly. This is intentionally lightweight
+# (no GPU, no full training) so it runs in under a minute on GitHub's
+# free runners - just enough to catch broken imports/syntax before they
+# reach main.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sanity-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check all modules import cleanly
+        run: |
+          cd src
+          python -c "import dataset, model, model_scratch, train, train_scratch, evaluate, evaluate_scratch, gradcam, gradcam_scratch"
+
+      - name: Compile check (catches syntax errors)
+        run: python -m py_compile src/*.py app/*.py scripts/*.py

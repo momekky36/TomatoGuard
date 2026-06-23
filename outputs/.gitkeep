@@ -1,0 +1,2 @@
+This folder will be populated when you run src/train.py (transfer-learning
+track) → src/evaluate.py → src/gradcam.py. See the README for commands.
