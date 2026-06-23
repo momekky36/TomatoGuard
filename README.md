@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🍅 TomatoGuard — AI-Powered Tomato Leaf Disease Detection
 
 ![Sanity Check](https://github.com/YOUR-USERNAME/tomatoguard/actions/workflows/sanity-check.yml/badge.svg)
@@ -168,44 +167,6 @@ python app.py
 **No GPU?** Use [Google Colab](https://colab.research.google.com/) (free
 T4 GPU) — upload this repo, run the same commands, training takes
 ~10-20 minutes for the full dataset.
-
-## Deploying the demo (optional, makes a great CV link)
-
-Push this repo to GitHub, then create a free
-[Hugging Face Space](https://huggingface.co/spaces) (Gradio SDK), point it
-at your repo, and you get a live public URL you can put directly on your
-resume/LinkedIn — e.g. "Try it live: huggingface.co/spaces/yourname/tomato-guard".
-
-## Suggested CV / resume bullets
-
-Pick 2-3. The first uses the real number this build achieved; swap in your
-transfer-learning number once you run that track on Colab (likely higher):
-
-- *Built an end-to-end computer vision pipeline (PyTorch) that classifies
-  10 tomato leaf conditions, training a CNN from scratch on 2,000
-  real-world images and reaching 92% test accuracy (0.92 macro-F1) on a
-  held-out test set, single-CPU, with no pretrained weights.*
-- *Implemented a transfer-learning track (EfficientNet-B0 + ImageNet
-  weights) projected to reach ~95-98% accuracy on the full 18,000-image
-  dataset, demonstrating the accuracy/data/compute tradeoff vs. training
-  from scratch.*
-- *Addressed real-world class imbalance (14x skew between classes) using
-  weighted sampling and macro-F1 model selection instead of raw accuracy.*
-- *Implemented Grad-CAM explainability to visualize model decision regions,
-  and shipped an interactive Gradio web demo for non-technical users.*
-- *Designed a modular, reproducible ML pipeline (data prep, training,
-  evaluation, explainability, deployment) with checkpointing and early
-  stopping.*
-
-## Possible extensions (good "future work" talking points in interviews)
-
-- Swap in object detection (YOLO) to localize multiple lesions per leaf,
-  not just classify the whole image.
-- Add a second crop (potato, grape — also in PlantVillage) to show
-  generalization.
-- Quantize/export to ONNX or TFLite for on-device mobile inference.
-- Active-learning loop: route low-confidence predictions to a human
-  reviewer and retrain on corrected labels.
 
 ## Credits & license
 
